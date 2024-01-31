@@ -6,8 +6,8 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: #f06; /* Set your preferred attractive background color */
-    color: #333; /* Set text color to a dark shade for better visibility */
+    background-color: #f06; 
+    color: #333; 
 }
 
 h1 {
@@ -19,11 +19,11 @@ h1 {
 .game-container {
     display: grid;
     grid-template-columns: repeat(var(--puzzle-size), 1fr);
-    gap: 20px; /* Increased gap for better visual separation */
-    max-width: 500px; /* Increase the game board size by adjusting max-width */
+    gap: 20px; 
+    max-width: 500px; 
     padding: 20px;
     border-radius: 10px;
-    background-color: #fff; /* Set game board background color */
+    background-color: #fff; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -31,23 +31,23 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #3498db; /* Set puzzle piece background color */
-    color: #fff; /* Set text color to white for better visibility */
+    background-color: #3498db; 
+    color: #fff; 
     border: 1px solid #2980b9;
     cursor: pointer;
-    font-size: 28px; /* Increase font size for better visibility of numbers */
+    font-size: 28px; 
     font-weight: bold;
     transition: transform 0.2s ease-in-out;
     border-radius: 5px;
-    width: 77px; /* Adjust the width to make it square */
+    width: 77px; 
     height: 77px;
 }
 
 .empty-piece {
-    background-color: #bdc3c7; /* Set empty piece color */
+    background-color: #bdc3c7;
 }
 
-/* Add these styles for game info */
+
 #game-info {
     text-align: center;
     margin-top: 20px;
@@ -66,4 +66,3 @@ h1 {
     margin: 5px 0;
 }
 
-/* Adjust styling as needed */
