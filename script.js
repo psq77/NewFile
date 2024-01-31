@@ -1,7 +1,7 @@
 const puzzleContainer = document.getElementById('game-container');
 const resetButton = document.getElementById('reset-button');
 const puzzleInfo = prompt('Welcome to 15 Puzzle Game!\nPlease choose the puzzle size (3, 4, or 5):');
-const puzzleSize = Math.max(3, Math.min(5, parseInt(puzzleInfo))) || 4; // Default to 4x4 if user enters an invalid size
+const puzzleSize = Math.max(3, Math.min(5, parseInt(puzzleInfo))) || 4; 
 puzzleContainer.style.setProperty('--puzzle-size', puzzleSize);
 let puzzleBoard;
 let moveCounter = 0;
@@ -10,7 +10,7 @@ let touchStartX = 0;
 let touchStartY = 0;
 
 
-const moveSound = new Audio('move-sound.mp3'); // Replace 'move-sound.mp3' with your sound file
+const moveSound = new Audio('move-sound.mp3'); 
 
 function generatePuzzle() {
     const numbers = Array.from({ length: puzzleSize * puzzleSize - 1 }, (_, index) => index + 1);
@@ -32,11 +32,6 @@ function renderPuzzle() {
     updateMoveCounter();
 }
 
-function handleMove(number) {
-    // Clicking on pieces is disabled in this version
-
-    // You can choose whether to allow clicking on pieces or only use arrow keys for movement.
-}
 
 function handleKeyPress(event) {
     const key = event.key;
@@ -202,7 +197,6 @@ function formatTime(milliseconds) {
     return `${minutes}:${formattedSeconds < 10 ? '0' : ''}${formattedSeconds}`;
 }
 
-// Reset the game
 function resetGame() {
     stopTimer();
     moveCounter = 0;
@@ -211,14 +205,12 @@ function resetGame() {
     renderPuzzle();
     startTimer();
 }
-
-// Initial setup
 resetGame();
 
-// Add event listener for the reset button
+
 resetButton.addEventListener('click', resetGame);
 
-// Add event listener for key press
+
 document.addEventListener('keydown', handleKeyPress);
 document.addEventListener('touchstart', handleKeyPress);
 document.addEventListener('touchend', handleKeyPress);
